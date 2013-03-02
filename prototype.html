@@ -1,0 +1,61 @@
+<script type="text/javascript">
+
+var Person = function(name) {
+	this.id = name;
+
+};
+
+
+Person.prototype.lol = function() {
+	alert(this.id);
+}
+
+
+Person.prototype.xo = function() {
+	return 5+5;
+}
+
+
+var Cat = function(name) {
+	this.id = name;
+}
+
+var daz = new Person("Darren");
+
+daz.lol();
+
+Cat.prototype = new Person();
+
+var kitty = new Cat("Drake");
+
+var result = kitty.xo();
+alert(result);
+kitty.lol();
+
+var a, b;
+
+a = [];
+b = [];
+
+a.push('apple');
+a.push('banana');
+a.push('orange');
+
+
+
+b = a.join("_");
+
+var list = a.map(function(i) {
+	return i + "WORKS";
+});
+
+
+a.forEach(function(p) {
+	alert(p);
+});
+
+alert(list);
+
+
+
+</script>
